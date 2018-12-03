@@ -1,0 +1,21 @@
+<!--pages/product/product.wxml-->
+
+<view>
+ <view>
+    <image src="/image/Group 5.png" class="top" />
+    <text class="text">Face Job</text>
+  </view>
+   <view  class="middle">
+    <text class="content">产品介绍</text>
+    <text class="introduce">我们的产品FaceJob是一款全新的短视频招聘APP企业制作视频介绍资料。可以帮助求职者全面、快速和准确了解企业信息，感受企业氛围，身临其境的感受到真实的办公环境。与此同时，FaceJob有企业诚信认证体系，可以杜绝虚假招聘信息，隐私泄露。
+求职者制作视频简历，通过30秒视频进行自我介绍，展示个人形象。FaceJob基于全新的平台优势，打破传统文字加图片的简历形式，通过视频展示，让企业招聘负责人直观感受求职者言谈形象，免去许多初次面试或者异地面试的麻烦。</text>
+    <image src="/image/logo01.png" class="photo" />
+    <view class="nav">
+        <ul>
+            <li>联系我们</li>
+            <li>关注我们</li>
+        </ul>
+    </view>
+    <view style="width: 100%; height: 1rem"></view>
+</view>
+</view>

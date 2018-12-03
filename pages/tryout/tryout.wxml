@@ -1,0 +1,19 @@
+<!-- pages/tryout/tryout.wxml -->
+<!-- pages/product/product.wxml -->
+<view>
+    <view>
+        <image src="/image/Group 5.png" class="top" />
+        <text class="text">Face Job</text>
+    </view>
+    <view class="middle">
+        <text class="content">申请试用</text>
+        <view class="from">
+            <input type="text"  placeholder="请输入公司名称" class="box" />
+            <input type="text" placeholder="请输入您的姓名" class="box" />
+            <input type="text" placeholder="请输入您的手机号" class="box" />
+            <button class="but">提交</button>
+        </view>
+        <image src="/image/logo01.png" class="photo" />
+        <view style="width: 100%; height: 1rem"></view>
+    </view>
+</view>

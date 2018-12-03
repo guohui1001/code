@@ -1,0 +1,8 @@
+<!--pages/home/home.wxml-->
+<view>
+ <view>
+    <image src="/image/Group 1.png" class="top" />
+    <text class="text">Face Job</text>
+  </view>
+  <intro />
+</view>

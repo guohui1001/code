@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+      "intro": "/component/intro/intro"
+    }
+  }
