@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/tryout/tryout",
     "pages/home/home",
+    "pages/product/product",
+    "pages/tryout/tryout",
+    
     "pages/index/index",
     "pages/logs/logs",
-    "pages/product/product"
-    
+    "pages/particulars/particulars"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,13 +22,13 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "text": "关于我们",
+        "text": "测试一下",
         "iconPath": "/image/icon/icon_sq_1nor.png",
         "selectedIconPath": "/image/icon/icon_sq_nor1.png"
       },
       {
         "pagePath": "pages/product/product",
-        "text": "产品介绍",
+        "text": "新闻资讯",
         "iconPath": "/image/icon/icon_prduct_nor.png",
         "selectedIconPath": "/image/icon/icon_prduct_pr.png"
       },

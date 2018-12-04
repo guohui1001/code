@@ -1,0 +1,32 @@
+.article{
+    width:18rem;
+    height:11.25rem;
+    background:rgba(255,255,255,1);
+     box-shadow:0rem 0.31rem 0.63rem -0.31rem rgba(145,193,255,1);
+    border-radius:0.81rem;
+    margin: auto;
+}
+.photo{
+    width: 18rem;
+    height: 7.4rem;
+    border-radius:0.81rem;
+}
+.character{
+    width: 16rem;
+    margin: auto;
+    
+}
+.title{
+    width: 16rem;
+    font-size:0.88rem;
+    color:rgba(0,0,0,1);
+    line-height:1.13rem;
+    margin-top: .5rem;
+    display: flex;
+}
+.content{
+    width: 16rem;
+    font-size:0.75rem;
+    color:gray;
+    line-height:1rem;
+}
