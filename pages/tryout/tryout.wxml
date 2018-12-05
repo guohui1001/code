@@ -1,11 +1,13 @@
-<!-- pages/tryout/tryout.wxml -->
-<!-- pages/product/product.wxml -->
+
 <view>
     <view>
         <image src="/image/Group 5.png" class="top" />
-        <text class="text">Face Job</text>
+        <text class="logo">Face Job</text>
     </view>
     <view class="middle">
+       <text class="content">产品介绍</text>
+       <text class="introduce">成都瀚粒企业管理咨询有限公司成立于2014年，前身是一家兼具创造性与艺术性猎头公司，2018年公司全新起航，以4年来积累的丰富的互联网，计算机咨询服务经验为底蕴，进入IT互联网，高新技术行业，进行人才猎聘，提供高效快捷方便的视频招聘软件。</text>
+        <view class="centre">
         <text class="content">申请试用</text>
         <view class="from">
             <input type="text"  placeholder="请输入公司名称" class="box" />
@@ -13,7 +15,8 @@
             <input type="text" placeholder="请输入您的手机号" class="box" />
             <button class="but">提交</button>
         </view>
-        <image src="/image/logo01.png" class="photo" />
+        </view>
+        <image src="/image/logo02.png" class="photo" />
         <view style="width: 100%; height: 1rem"></view>
     </view>
 </view>
