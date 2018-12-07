@@ -2,7 +2,7 @@
 <view class="article">
     <image class="photo" src="/image/Group 7.png" />
     <view class="character">
-    <text class="title">有一个App叫FaceJob,有一家公司在旧小</text>
-    <text class="content">最让人睡意朦胧的就是冬日午休时间的阳光</text>
+    <text class="title">有一个App叫FaceJob,有一家公司在旧小区的6楼</text>
+    <text class="content">最让人睡意朦胧的就是冬日午休时间的阳光，这两天的</text>
     </view>
 </view>

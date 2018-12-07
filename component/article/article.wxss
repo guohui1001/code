@@ -1,32 +1,32 @@
 .article{
-    width:18rem;
-    height:11.25rem;
+    width:710rpx;
+    height:360rpx;
     background:rgba(255,255,255,1);
-     box-shadow:0rem 0.31rem 0.63rem -0.31rem rgba(145,193,255,1);
-    border-radius:0.81rem;
+    box-shadow:0rpx 10rpx 20rpx -10rpx rgba(145,193,255,1);
+    border-radius:26rpx;
     margin: auto;
 }
 .photo{
-    width: 18rem;
-    height: 7.4rem;
-    border-radius:0.81rem;
+    width: 710rpx;
+    height: 240rpx;
+    border-radius:26rpx;
 }
 .character{
-    width: 16rem;
+    width: 676rpx;
     margin: auto;
     
 }
 .title{
-    width: 16rem;
-    font-size:0.88rem;
+    width: 676rpx;
+    font-size:28rpx;
     color:rgba(0,0,0,1);
-    line-height:1.13rem;
-    margin-top: .5rem;
+    line-height:36rpx;
+    margin-top: 20rpx;
     display: flex;
 }
 .content{
-    width: 16rem;
-    font-size:0.75rem;
+    width: 672rpx;
+    font-size:24rpx;
     color:gray;
-    line-height:1rem;
+    line-height:32rpx;
 }

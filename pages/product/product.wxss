@@ -1,14 +1,14 @@
 /* pages/product/product.wxss */
 .top{
     width: 100%;
-    height: 4rem;
+    height: 128rpx;
     position: relative;
     background-color: #006fff;
 }
 .text{
-    font-size: 1rem;
-    left: 8rem;
-    top: 2rem;
+    font-size: 36rpx;
+    left: 298rpx;
+    top:68rpx;
     color: #FFFFFF;
     position: absolute;
     

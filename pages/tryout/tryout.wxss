@@ -1,79 +1,73 @@
 
 .top{
     width: 100%;
-    height: 18rem;
+    height: 560rpx;
     position: relative;
 }
 .logo{
-    font-size: 1rem;
-    left: 8rem;
-    top: 2rem;
+    font-size: 36rpx;
+    left: 298rpx;
+    top: 62rpx;
     color: #FFFFFF;
     position: absolute;
 }
 .middle{
-    width: 18rem;
+    width: 670rpx;
     margin: auto;
     
 }
 .introduce{
-    font-size: 0.75rem;
+    font-size: 24rpx;
     color: gray;
-    margin-top: 1rem;
-    text-indent: 2rem;
+    margin-top: 20rpx;
+    text-indent: 40rpx;
     text-align: left;
 }
 .centre{
-    width:18rem;
-    height:14.56rem;
+    width:670rpx;
+    height:466rpx;
     background:rgba(255,255,255,1);
-    box-shadow:0rem 0.31rem 0.63rem -0.31rem rgba(145,193,255,1);
-    border-radius:0.81rem;
-    margin-top: 2rem;
+    box-shadow:0rpx 10rpx 20rpx -10rpx rgba(145,193,255,1);
+    border-radius:26rpx;
+    margin-top: 40rpx;
 }
 .content{
-    font-size: 1rem;
-    margin-left: 7rem;
+    font-size: 32rpx;
+    margin-left: 280rpx;
     color: black;
     display: flex;
 }
 
 
 .from{
-    width: 18rem;
-    height: 10rem;
+    width: 720rpx;
+    height: 400rpx;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 20rpx;
 }
 .box{
-    width: 14rem;
-    height: 1rem;
-    border: .01rem solid #006fff;
+    width:520rpx;
+    height:64rpx;
+    background:rgba(255,255,255,1);
+    border:2rpx solid rgba(0,111,255,1);
     margin: auto;
-    font-size: .8rem;
-    margin-bottom: 1rem;
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
     text-align: center;
      
 }
 
 .but{
-    width: 14rem;
-    height: 2rem;
-    font-size: 0.8rem;
+    width: 520rpx;
+    height: 60rpx;
+    font-size:28rpx;
     background-color: #006fff;
     color:#91C1FF;
 
 }
-.introduce{
-    font-size: 0.75rem;
-    color: gray;
-    margin-top: 1rem;
-    text-indent: 2rem;
-    text-align: left;
-}
 .photo{
-    width: 5rem;
-    height: 5rem;
-    margin-left: 7rem;
-    margin-top: 1rem;
+    width: 172rpx;
+    height: 172rpx;
+    margin-left: 298rpx;
+    margin-top: 20rpx;
 }
