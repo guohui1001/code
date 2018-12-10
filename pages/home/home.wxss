@@ -1,6 +1,7 @@
 /* pages/home/home.wxss */
 .body{
     background-color: #000042;
+    height:100vh;
 }
 .background{
     width: 100%;
