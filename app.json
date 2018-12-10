@@ -1,11 +1,11 @@
 {
   "pages": [
-    
     "pages/tryout/tryout",
     "pages/home/home",
     "pages/product/product",
     "pages/index/index",
     "pages/logs/logs",
+    
     "pages/particulars/particulars"
   ],
   "window": {
@@ -18,7 +18,7 @@
   "tabBar": {
     "color": "gray",
     "selectedColor": "#006FFF",
-    "backgroundColor": "rgb(248, 243, 245)",
+    "backgroundColor": "#FFF",
     "list": [
       {
         "pagePath": "pages/home/home",

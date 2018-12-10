@@ -1,8 +1,35 @@
-<!--pages/home/home.wxml-->
-<view>
- <view>
-    <image src="/image/Group 1.png" class="top" />
+<!-- pages/home/home.wxml -->
+<view class="body">
+  <view class="background">
+    <image src="/image/bg_@2x.png" class="top" />
     <text class="text">Face Job</text>
+    <image src="/image/Face@2x.png" class="logo" />
+    <image src="/image/star01_@2x.png" class="photo" />
+    <image src="/image/star02_@2x.png" class="photo1" />
+    <image src="/image/star03_@2x.png" class="photo2" />
   </view>
-  <intro />
+  <view class="topic">
+    <text class="title">选择你心仪的小怪兽加入测试吧~</text>
+  </view>
+  <view class="bottom">
+    <view class="bottom-imgBox">
+      <image src="/image/starmaster01@2x.png" class="logo1" />
+      <image src="/image/master01@2x.png" class="smallIcon" />
+    </view>
+    <view class="bottom-imgBox">
+      <image src="/image/starmaster02@2x.png" class="logo2" />
+      <image src="/image/master02@2x.png" class="smallIcon2" />
+    </view>
+  </view>
+
+  <view class="bottom2">
+    <view class="bottom-imgBox">
+      <image src="/image/starmaster03@2x.png" class="logo1" />
+      <image src="/image/master031@2x.png" class="smallIcon" />
+    </view>
+    <view class="bottom-imgBox">
+      <image src="/image/starmaster04@2x.png" class="logo2" />
+      <image src="/image/master03@2x.png" class="smallIcon2" />
+    </view>
+  </view>
 </view>

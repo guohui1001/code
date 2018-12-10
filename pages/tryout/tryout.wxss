@@ -20,8 +20,6 @@
     font-size: 24rpx;
     color: gray;
     margin-top: 20rpx;
-    text-indent: 40rpx;
-    text-align: left;
 }
 .centre{
     width:670rpx;
@@ -34,17 +32,18 @@
 .content{
     font-size: 32rpx;
     margin-left: 280rpx;
+    margin-top: 22rpx;
     color: black;
     display: flex;
 }
 
 
-.from{
+/* .from{
     width: 720rpx;
     height: 400rpx;
     margin: auto;
     margin-top: 20rpx;
-}
+} */
 .box{
     width:520rpx;
     height:64rpx;
@@ -52,6 +51,7 @@
     border:2rpx solid rgba(0,111,255,1);
     margin: auto;
     font-size: 28rpx;
+    margin-top: 40rpx;
     margin-bottom: 20rpx;
     text-align: center;
      
@@ -68,6 +68,6 @@
 .photo{
     width: 172rpx;
     height: 172rpx;
-    margin-left: 298rpx;
+    margin-left: 258rpx;
     margin-top: 20rpx;
 }
