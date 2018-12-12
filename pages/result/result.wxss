@@ -1,0 +1,58 @@
+/* pages/result/result.wxss */
+.box{
+  width: 750rpx;
+  height: 590rpx;
+}
+.text{
+    font-size: 36rpx;
+    left: 298rpx;
+    top: 62rpx;
+    color: #FFFFFF;
+    position: absolute;
+}
+.box-pink{
+    width: 108rpx;
+    height: 64rpx;
+    position: absolute;
+    left: 110rpx;
+    top: 112rpx;
+}
+.box-blue{
+    width: 260rpx;
+    height: 154rpx;
+    position: absolute;
+    right: 32rpx;
+    top: 136rpx;
+}
+.buttom-box{
+    width: 670rpx;
+    height: 908rpx;
+    position: absolute;
+    left: 40rpx;
+    top: 368rpx;
+    background:rgba(255,255,255,1);
+    box-shadow:0rpx 12rpx 20rpx -12rpx rgba(28,3,64,0.3);
+    border-radius:20rpx;
+}
+
+.box-ufo{
+    width: 424rpx;
+    height: 248rpx;
+    position: absolute;
+    left: 164rpx;
+    top: 202rpx;
+}
+.box-yellow{
+    width: 200rpx;
+    height: 120rpx;
+    position: absolute;
+    left: 18rpx;
+    top: 354rpx;
+}
+.boxPink{
+    width: 136rpx;
+    height: 78rpx;
+    position: absolute;
+    right: 66rpx;
+    top: 442rpx;
+}

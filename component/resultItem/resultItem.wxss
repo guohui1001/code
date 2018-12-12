@@ -1,0 +1,60 @@
+/* component/resultItem/resultItem.wxss */
+.box{
+    width: 300rpx;
+    margin: auto;
+}
+.title{
+    font-size: 36rpx;
+    position: absolute;
+    left: 205rpx;
+    top: 120rpx;
+    font-weight:500;
+}
+.topic{
+    font-size: 52rpx;
+    margin-top: 200rpx;
+    display: flex;
+    justify-content: center;
+    color: #FFD50F;
+}
+.match{
+    width: 402rpx;
+    display: flex;
+    justify-content: center;
+    margin-top: 20rpx;
+}
+.matched{
+    color: #FFD50F;
+}
+.content{
+    width:630rpx;
+    height:160rpx;
+    font-size:28rpx;
+    font-weight:500;
+    color:rgba(0,0,0,1);
+    line-height:40rpx;
+}
+.QB{
+    width:252rpx;
+    height: 210rpx;
+    margin: auto;
+    margin-top: 20rpx;
+}
+.code{
+    width:160rpx;
+    height:160rpx;
+    background:rgba(216,216,216,1);
+    border:2rpx solid rgba(151,151,151,1);
+    margin: auto;
+}
+.scanning{
+    font-size:28rpx;
+    font-weight:400;
+    color:rgba(3,1,30,1);
+}
+.photo{
+    width:388rpx;
+    height:78rpx;
+   margin-left: 142rpx;
+   margin-top: 30rpx;
+}
