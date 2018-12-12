@@ -3,8 +3,8 @@
     <image src="/image/bg@2x.png" class="picture" />
     <text class="text">Face Job</text>
     <image src="/image/stara01_@2x.png" class="picture-box" />
-     <image src="/image/master01@2x.png" class="monster" />
-    <image src="/image/ufo@2x.png" class="ufo" />
+     <image src="/image/master01@2x.png" class="monster" animation='{{attentionAnim}}'/>
+    <image src="/image/ufo@2x.png" animation='{{attentionAnim}}' class="ufo" />
     <image src="/image/staar02_@2x.png" class="star" />
     <image src="/image/Triangle@2x.png" class="arrow" />
     <view class="topic">
