@@ -1,10 +1,7 @@
 {
   "pages": [
-<<<<<<< HEAD
     "pages/home/home",
-=======
     "pages/result/result",
->>>>>>> f85b29e27ed46ccc554ffbd26a7c8a23de15fddf
     "pages/test/test",
     "pages/tryout/tryout",
     "pages/product/product",
