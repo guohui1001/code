@@ -1,0 +1,15 @@
+<!-- pages/result/result.wxml -->
+<view>
+    <view>
+        <image src="/image/bg@2x2.png" class="box" />
+         <text class="text">测试结果</text>
+         <image src="/image/stara03_@2x.png" class="box-pink" />
+         <image src="/image/staar02_@2x.png" class="box-blue" />
+         <view class="buttom-box">
+             <resultItem />
+         </view>
+         <image src="/image/ufo2@2x.png" class="box-ufo" />
+         <image src="/image/stara01_@2x.png" class="box-yellow" />
+         <image src="/image/stara03_@2x.png" class="boxPink"/>
+    </view>
+</view>
