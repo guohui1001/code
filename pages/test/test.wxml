@@ -1,7 +1,11 @@
 <!-- pages/test/test.wxml -->
-<view style="height:100vh">
-    <image src="/image/bg@2x.png" class="picture" />
-    <text class="text">Face Job</text>
+<view >
+    <image src="/image/bg@2x.jpg" class="picture" />
+   <view class='nav bg-white' style='height:{{navH}}rpx'>
+    <view class='nav-title'>Face Job
+      <image src='/image/fanhui@2x .png' mode='aspectFit' class='back' bindtap='navBack'></image> 
+    </view>
+  </view>
     <image src="/image/stara01_@2x.png" class="picture-box" />
     <image src="{{imgSrc}}" class="monster" animation='{{animationData}}' />
     <image src="/image/ufo@2x.png" class="ufo" animation='{{animationData}}'/>

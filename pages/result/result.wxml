@@ -1,6 +1,7 @@
 <!-- pages/result/result.wxml -->
 <view>
         <image src="/image/bg@2x2.png" class="box" />
+        
          <text class="text">测试结果</text>
          <image src="/image/stara03_@2x.png" class="box-pink" />
          <image src="/image/staar02_@2x.png" class="box-blue" />

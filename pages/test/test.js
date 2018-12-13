@@ -1,4 +1,5 @@
 // pages/test/test.js
+const App = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -13,7 +14,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      imgSrc: `/image/master0${options.id}@2x.png`
+      navH: App.globalData.navHeight
+    })
+    this.setData({
+      imgSrc: `/image/master0${options.id || 1}@2x.png`
     })
   },
 
@@ -86,5 +90,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  navBack(){
+    wx.switchTab({
+      url:"/pages/home/home"
+    })
+}
 })
