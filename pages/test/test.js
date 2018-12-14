@@ -16,6 +16,23 @@ Page({
       imgSrc: `/image/master0${options.id}@2x.png`
     })
   },
+   //渐入，渐出实现 
+   show : function(that,param,opacity){
+    var animation = wx.createAnimation({
+      //持续时间800ms
+      duration: 3000,
+      timingFunction: 'ease',
+    });
+    //var animation = this.animation
+    animation.opacity(opacity).step()
+    //将param转换为key
+    var json = '{"' + param + '":""}'
+    json = JSON.parse(json);
+    json[param] = animation.export()
+    //设置动画
+    that.setData(json)
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -51,6 +68,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.show(this, 'slide_up1',  1)
+
   },
 
   /**

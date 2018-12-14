@@ -90,3 +90,6 @@
     bottom: 40rpx;
     color: #fff;
 }
+.init{
+    opacity:0;
+}

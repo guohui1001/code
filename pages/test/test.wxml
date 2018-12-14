@@ -7,7 +7,7 @@
     <image src="/image/ufo@2x.png" class="ufo" animation="{{animationData}}"/>
     <image src="/image/staar02_@2x.png" class="star" />
     <image src="/image/Triangle@2x.png" class="arrow" />
-    <view class="topic">
+    <view class="topic init"  animation="{{slide_up1}}">
         <text class="content">当你看到路上有跌倒的老人你扶不扶?</text>
         <view class="select-btn">
             <view >
