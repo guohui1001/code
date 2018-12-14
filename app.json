@@ -1,8 +1,9 @@
 {
   "pages": [
+    
     "pages/home/home",
-    "pages/result/result",
     "pages/test/test",
+    "pages/result/result",
     "pages/tryout/tryout",
     "pages/product/product",
     "pages/index/index",
@@ -16,6 +17,7 @@
     "navigationBarTitleText": "Feac Job",
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
+    
   },
   "tabBar": {
     "color": "#666666",
@@ -42,4 +44,6 @@
       }
     ]
   }
+
+
 }

@@ -1,4 +1,5 @@
 // pages/test/test.js
+const App = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -13,7 +14,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      imgSrc: `/image/master0${options.id}@2x.png`
+      navH: App.globalData.navHeight
+    })
+    this.setData({
+      imgSrc: `/image/master0${options.id || 1}@2x.png`
     })
   },
    //渐入，渐出实现 
@@ -38,6 +42,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+  
     const animation = wx.createAnimation({
       duration: 1000,
       timingFunction: 'linear',
@@ -104,5 +109,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  navBack(){
+    wx.switchTab({
+      url:"/pages/home/home"
+    })
+}
 })

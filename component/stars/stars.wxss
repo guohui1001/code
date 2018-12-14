@@ -2,5 +2,5 @@
 image{
     width: 32rpx;
     height: 30rpx;
-    margin-left: 20rpx;
+    /* margin-left: 20rpx; */
 }

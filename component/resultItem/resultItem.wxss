@@ -25,6 +25,7 @@
 }
 .matched{
     color: #FFD50F;
+    padding-right: 20rpx;
 }
 .content{
     width:630rpx;
