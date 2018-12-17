@@ -1,0 +1,7 @@
+<!-- canvas.wxml -->
+<!-- 画布大小按需定制 这里我按照背景图的尺寸定的  -->
+<canvas  canvas-id="shareImg" style="width:750rpx;height:100vh;">
+</canvas>
+<image src="/image/Group 55@2x.png" class="photo" bindtap='share'/>
+
+

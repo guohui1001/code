@@ -1,4 +1,5 @@
 <!-- pages/result/result.wxml -->
+
 <view>
         <image src="/image/bg@2x2.png" class="box" />
         
@@ -11,4 +12,5 @@
          <image src="/image/ufo2@2x.png" class="box-ufo" />
          <image src="/image/stara01_@2x.png" class="box-yellow" />
          <image src="/image/stara03_@2x.png" class="boxPink"/>
+         <buttom bindtap=""></buttom>
 </view>

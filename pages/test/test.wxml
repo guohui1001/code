@@ -14,12 +14,12 @@
     <view class="topic init"  animation="{{slide_up1}}">
         <text class="content">当你看到路上有跌倒的老人你扶不扶?</text>
         <view class="select-btn">
-            <view >
-            <text class="btn">扶</text>
-            <image src="/image/btn_@2x.png" class="but" />
+            <view bindtap="selectShow">
+                <text class="btn">扶</text>
+                <image src="/image/btn_@2x.png" class="but" />
             </view>
-            <view>
-            <text class="btn">扶 </text>
+            <view bindtap="selectShow">
+            <text class="btn" >扶 </text>
              <image src="/image/btn_@2x.png" class="but" />
             </view>
         </view>

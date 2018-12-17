@@ -21,7 +21,7 @@ Page({
     })
   },
    //渐入，渐出实现 
-   show : function(that,param,opacity){
+   show (that,param,opacity){
     var animation = wx.createAnimation({
       //持续时间800ms
       duration: 3000,
@@ -74,7 +74,12 @@ Page({
    */
   onShow: function () {
     this.show(this, 'slide_up1',  1)
-
+  },
+  selectShow(){
+    this.show(this, 'slide_up1',  0)
+    setTimeout(function(){
+      this.show(this, 'slide_up1',  1)
+    }.bind(this),1000)
   },
 
   /**
