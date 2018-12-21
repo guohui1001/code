@@ -1,18 +1,81 @@
 // pages/tryout/tryout.js
+const App = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    company:"",
+    username:"",
+    phone:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+   
 
+  },
+  companyInput:function(e){
+    // console.log(e,"gongsi")
+    this.setData({
+      company:e.detail.value
+    })
+  },
+  userNameInput:function(e){
+    // console.log(e,"mingzi")
+    this.setData({
+      username:e.detail.value
+    })
+  },
+  phoneInput:function(e){
+    // console.log(e,"dianhua")
+    this.setData({
+      phone:e.detail.value
+    })
+  },
+  requestData:function(id){
+    const app = getApp();
+    wx.request({
+      url:'http://192.168.0.107//faceJob_small_wechat//applyUse/saveApplyUse ',
+      method: 'POST',
+      header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
+      data: {
+        company: this.data.company,
+        name:this.data.username,
+        phoneNum:this.data.phone
+      },
+      success:function(res){
+var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/
+        // console.log(this.data.phone)
+        if(this.data.company == 0){
+          wx.showToast({
+            title: '公司名称！',
+            icon: 'succes',
+            duration: 1000,
+            mask: true
+          })
+        }else if(this.data.username == 0){
+          wx.showToast({
+            title: '姓名！',
+            icon: 'succes',
+            duration: 1000,
+            mask: true
+          })
+        }else if(!myreg.test(this.data.phone)){
+          wx.showToast({
+            title: '手机号！',
+            icon: 'succes',
+            duration: 1000,
+            mask: true
+          })
+        }
+       
+      }.bind(this)
+
+    })
   },
 
   /**

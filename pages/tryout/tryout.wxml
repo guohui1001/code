@@ -9,11 +9,11 @@
        <text class="introduce">成都瀚粒企业管理咨询有限公司成立于2014年，前身是一家兼具创造性与艺术性猎头公司，2018年公司全新起航，以4年来积累的丰富的互联网，计算机咨询服务经验为底蕴，进入IT互联网，高新技术行业，进行人才猎聘，提供高效快捷方便的视频招聘软件。</text>
         <view class="centre">
         <text class="content">申请试用</text>
-        <view class="from">
-            <input type="text"  placeholder="请输入公司名称" class="box" />
-            <input type="text" placeholder="请输入您的姓名" class="box" />
-            <input type="text" placeholder="请输入您的手机号" class="box" />
-            <button class="but">提交</button>
+        <view class="from" >
+            <input type="text" bindinput="companyInput" name="company" placeholder="请输入公司名称" class="box" />
+            <input type="text" bindinput="userNameInput" name="username"placeholder="请输入您的姓名" class="box" />
+            <input type="text" bindinput="phoneInput"  name="phone" placeholder="请输入您的手机号" class="box" />
+            <button class="but"  bindtap="requestData">提交</button>
         </view>
         </view>
         <image src="/image/logo02.png" class="photo" />

@@ -1,7 +1,10 @@
 <!-- pages/particulars/particulars.wxml -->
 <view>
     <view class="top">
+     <view class='nav bg-white' style='height:{{navH}}rpx'>
         <text class="text">Face Job</text>
+          <image src='/image/fanhui@2x .png' mode='aspectFit' class='back' bindtap='navBack'></image> 
+    </view>
     </view>
     <view class="article">
         <text class="title">{{newsDetail.title}}</text>
