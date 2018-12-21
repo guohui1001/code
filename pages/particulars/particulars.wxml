@@ -1,5 +1,7 @@
 <!-- pages/particulars/particulars.wxml -->
-<view>
+
+<web-view wx:if="{{newsDetail.urlType==1}}" src="http://www.baidu.com"></web-view>
+<view wx:else>
     <view class="top">
         <text class="text">Face Job</text>
     </view>

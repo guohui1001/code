@@ -1,4 +1,6 @@
 //app.js
+const Towxml = require('/towxml/main');     //引入towxml库
+const  devip = require('/utils/ipconfig')
 App({
   onLaunch: function () {
     wx.getSystemInfo({
@@ -17,13 +19,11 @@ App({
     // 登录
     wx.login({
       success: res => {
-        console.log(res, 'rrrrr')
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
-
 wx.request({
-  url:'http://192.168.0.107/faceJob_small_wechat/user/login',
+  url:`${devip.devip}/faceJob_small_wechat/user/login`,
   data:{
     username: 'wewijjudn', 
     password:'mkjshdnnjnj+--sadjj}}{{{'
@@ -31,7 +31,6 @@ wx.request({
   method:'POST',
   header: {"Content-Type":"application/x-www-form-urlencoded"},
   success:function(res){
-    console.log(res,'test')
     if(res.data.code === 0){
       this.globalData.token=res.data.data.token
     }
@@ -62,6 +61,7 @@ wx.request({
       }
     })
   },
+  towxml:new Towxml(),
   globalData: {
     userInfo: null,
     token:null
