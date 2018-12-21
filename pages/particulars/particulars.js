@@ -5,14 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id: '',
+    newsDetail: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.id, 'options')
+    // this.setData({
+    //   id: options.id
+    // })
+    this.requestData(options.id)
 
+  },
+  requestData:function(id){
+    const app = getApp();
+    wx.request({
+      url:'http://192.168.0.107//faceJob_small_wechat//news/newsDetail',
+      method: 'POST',
+      header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
+      data: {id: id},
+      success:function(res){
+        if(res.data.code === 0){
+          const newsDetail = res.data.data.news
+          console.log(newsDetail, 'sd')
+          this.setData({
+            newsDetail:newsDetail
+          })
+        }
+        console.log(res, '646')
+      }.bind(this)
+
+    })
   },
 
   /**

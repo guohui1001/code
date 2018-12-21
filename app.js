@@ -17,9 +17,30 @@ App({
     // 登录
     wx.login({
       success: res => {
+        console.log(res, 'rrrrr')
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+wx.request({
+  url:'http://192.168.0.107/faceJob_small_wechat/user/login',
+  data:{
+    username: 'wewijjudn', 
+    password:'mkjshdnnjnj+--sadjj}}{{{'
+  },
+  method:'POST',
+  header: {"Content-Type":"application/x-www-form-urlencoded"},
+  success:function(res){
+    console.log(res,'test')
+    if(res.data.code === 0){
+      this.globalData.token=res.data.data.token
+    }
+  }.bind(this),
+  fail:function(){
+
+  }
+
+})
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -42,6 +63,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    token:null
   }
 })

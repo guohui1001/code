@@ -16,7 +16,7 @@ Page({
                             that.queryUsreInfo();
                             //用户已经授权过
                             wx.switchTab({
-                                // url: '/pages/home/home'
+                                url: '/pages/home/home'
                             })
                         }
                     });
