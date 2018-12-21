@@ -1,5 +1,10 @@
 // pages/particulars/particulars.js
+
 const App = getApp();
+
+const  devip = require('../../utils/ipconfig')
+
+
 Page({
 
   /**
@@ -28,19 +33,17 @@ Page({
   requestData:function(id){
     const app = getApp();
     wx.request({
-      url:'http://192.168.0.107//faceJob_small_wechat//news/newsDetail',
+      url:`${devip.devip}/faceJob_small_wechat//news/newsDetail`,
       method: 'POST',
       header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
       data: {id: id},
       success:function(res){
         if(res.data.code === 0){
           const newsDetail = res.data.data.news
-          console.log(newsDetail, 'sd')
           this.setData({
             newsDetail:newsDetail
           })
         }
-        console.log(res, '646')
       }.bind(this)
 
     })
