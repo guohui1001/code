@@ -12,15 +12,15 @@
     <image src="/image/staar02_@2x.png" class="star" />
     <image src="/image/Triangle@2x.png" class="arrow" />
     <view class="topic init"  animation="{{slide_up1}}">
-        <text class="content">当你看到路上有跌倒的老人你扶不扶?</text>
+        <text class="content">{{index+1}}、{{questionDetail}}</text>
         <view class="select-btn">
-            <view bindtap="selectShow">
-                <text class="btn">扶</text>
-                <image src="/image/btn_@2x.png" class="but" />
+            <view bindtap="selectShow" class="facejobBtn" >
+               <image src="/image/btn_@2x.png" class="but" /><text class="btn">{{optionA}}、{{answerA}}</text>
+                
             </view>
             <view bindtap="selectShow">
-            <text class="btn" >扶 </text>
-             <image src="/image/btn_@2x.png" class="but" />
+            <image src="/image/btn_@2x.png" class="but" /><text class="btn" >{{optionB}}、{{answerB}}</text>
+             
             </view>
         </view>
     </view>

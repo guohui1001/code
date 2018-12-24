@@ -75,20 +75,20 @@
     bottom: 162rpx;
 }
 .select-btn{
-    display: flex;
-    justify-content:space-around;
+
     margin-top: 50rpx;
     margin-bottom: 50rpx;
+    margin-left: 20rpx;
+}
+.facejobBtn{
+    margin-bottom: 10rpx;
 }
 .but{
-    width: 60rpx;
-    height: 64rpx;
+    width: 50rpx;
+    height: 54rpx;
     vertical-align:middle;
 }
-.btn{
-    font-size: 36rpx;
-    vertical-align:middle;
-}
+
 .page-number{
     position: absolute;
     right: 40rpx;

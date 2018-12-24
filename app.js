@@ -1,5 +1,5 @@
 //app.js
-const Towxml = require('/towxml/main');     //引入towxml库
+// const Towxml = require('/towxml/main');     //引入towxml库
 const  devip = require('/utils/ipconfig')
 App({
   onLaunch: function () {
@@ -61,7 +61,7 @@ wx.request({
       }
     })
   },
-  towxml:new Towxml(),
+  // towxml:new Towxml(),
   globalData: {
     userInfo: null,
     token:null

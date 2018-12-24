@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/result/result",
+    "pages/test/test",
     "pages/product/product",
     "pages/index/index",
     "pages/demo/demo",
-    "pages/result/result",
     "pages/home/home",
     "pages/tryout/tryout",
-    "pages/test/test",
     "pages/logs/logs",
     "pages/particulars/particulars"
   ],

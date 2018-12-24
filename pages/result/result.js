@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    id:"",
+    jobName:"",
+    jobMachStar:"",
+    jobDesc:""
   },
 
   /**
@@ -14,7 +17,7 @@ Page({
   onLoad: function (options) {
    
   },
-
+ 
 
 
 
