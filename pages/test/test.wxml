@@ -11,15 +11,15 @@
     <image src="/image/ufo@2x.png" class="ufo" animation='{{animationData}}'/>
     <image src="/image/staar02_@2x.png" class="star" />
     <image src="/image/Triangle@2x.png" class="arrow" />
-    <view class="topic init"  animation="{{slide_up1}}">
-        <text class="content">{{index+1}}、{{questionDetail}}</text>
+    <view class="topic init"  animation="{{slide_up1}}" >
+        <text class="content" >{{index+1}}、{{current.title}}</text>
         <view class="select-btn">
-            <view bindtap="selectShow" class="facejobBtn" >
-               <image src="/image/btn_@2x.png" class="but" /><text class="btn">{{optionA}}、{{answerA}}</text>
+            <view bindtap="selectShow" class="facejobBtn" data-curent='A'>
+               <image src="/image/btn_@2x.png" class="but"/><text class="btn">{{current.optionA}}</text>
                 
             </view>
-            <view bindtap="selectShow">
-            <image src="/image/btn_@2x.png" class="but" /><text class="btn" >{{optionB}}、{{answerB}}</text>
+            <view bindtap="selectShow" data-curent='B'>
+            <image src="/image/btn_@2x.png" class="but" /><text class="btn" >{{current.optionB}}</text>
              
             </view>
         </view>

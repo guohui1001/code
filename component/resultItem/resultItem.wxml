@@ -1,5 +1,5 @@
 <!-- component/resultItem/resultItem.wxml -->
-<view  wx:for="{{newsResult}}" wx:key="{{item._id}}" wx:for-item="item"  >
+<view data="{{newsResult}}"  wx:key="id" wx:for-item="item._id" >
         <view class="box">
             <text class="title">{{item.jobDesc}}</text>
             <text class="topic">{{item.jobName}}</text>

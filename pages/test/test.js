@@ -7,111 +7,82 @@ Page({
   data: {
     animationData: {},
     imgSrc:'/image/master01@2x.png',
-    // topicList:[],
-    // answerArrays:["A","B"],
-
     index: 0,
     realIndex: 0,
     A: 0,
     B: 0,
-    a:0,
-    b:0,
+    a: 0,
+    b: 0,
     optionA: "A",
     optionB: "B",
-    // questionDetail: app.globalData.question[0].question,
-    // answerA: app.globalData.question[0].option.A,
-    // answerB: app.globalData.question[0].option.B,
-    list: ["在生活/工作中你做事是怎样一个人？", "在生活/工作中你更倾向于哪一个？", "在生活/工作中你比较注重的是哪一个？"],
-    listAB : ['A','B']
+    list: [{
+      title: "在生活/工作中你做事是怎样一个人？",
+      optionA: '我做事时，希望把每一个细节都做对',
+      optionB: '我做事时，希望快速搞定，达成结果',
+    }, {
+      title: "在生活/工作中你更倾向于哪一个？",
+      optionA: '希望把每一个细节都做对',
+      optionB: '希望快速搞定，达成结果'
+      }, {
+        title: "在生活/工作中你比较注重的是哪一个",
+        optionA: '我注重原则，恪守规则',
+        optionB: '我注重原理，探索规律'
+      }, {
+        title: "在生活/工作中你是否会按照计划行事？",
+        optionA: '我喜欢严格遵守既定计划，保持既定轨道',
+        optionB: '我喜欢尝试和变化，随时灵机一动，调整计划'
+      }, {
+        title: "你的性格属于哪一个？",
+        optionA: '我外向热情，关注他人的感受',
+        optionB: '我内向沉静，关注内心到的感受'
+      },{
+        title: "在与他人交流时你更愿意选择哪一个",
+        optionA: '我喜欢和他人进行情感上的交流',
+        optionB: '我喜欢和他人进行思维上的交流'
+      },{
+        title: "在生活/工作中你更关注哪一个？",
+        optionA: '我倾向于关注自己，追求个性',
+        optionB: '我倾向于关注他人，随遇而安'
+      },{
+        title: "在生活/工作中当你遇到问题时你会？",
+        optionA: '我只信自己思考出的结论',
+        optionB: '我经常求证他人的想法和观点'
+      },{
+        title: "你认为别人比较钦佩你的是哪一个？",
+        optionA: '别人钦佩于我的知识与洞察力',
+        optionB: '别人钦佩于我的力量与决断力'
+      },{
+        title: "你认为自己是怎样一个人？",
+        optionA: '我是一个严肃、自律的人',
+        optionB: '我是一个和平、随和的人'
+      }],
+    listAB: ['A', 'B'],
+    answer: '', //存放选择答案
+    current: Object, //当前题目对象
   },
-  randSort: function () {
-    return Math.random() > 0.5 ? 1 : -1;
-  },
-
-  setList: function () {
-    var newList = this.data.list.sort(this.randSort);
-    console.log(newList,'123')
-    this.setData({
-      list: newList,
-    });
-  },
-
-  setABC : function(){
-    var ab = this.data.listAB.sort(this.randSort);
-    console.log(ab,'123')
-    this.setData({
-      listAB: ab,
-    });
-  },
-
-  setOption: function(){
+  setOption: function() {
 
   },
-
-
-
-  selectShow: function () {
-    if (this.data.listAB[0] == 'A') {
-      this.setData({
-        A: this.data.A + 1
-      })
-    }
-    else if (this.data.listAB[0] == 'B') {
-      this.setData({
-        B: this.data.B + 1
-      })
-    }
-    this.setData({
-      index: this.data.index + 1,
-      realIndex: this.data.list[this.data.index],
-
-      
-    })
-   
-    this.setData({
-      questionDetail:list[0].list,
-     
-      answerA: app.globalData.question[this.data.realIndex].option[this.data.listAB[0]],
-      answerB: app.globalData.question[this.data.realIndex].option[this.data.listAB[1]],
-
-    })
-    if (this.data.index == 10) {
+  selectShow: function (options) {
+    console.log(options,'1')
+    if (this.data.index+1 >= this.data.list.length ) {
       wx.redirectTo({
         url: '/pages/result/result'
       })
     }
-  },
-
-  selectShow: function () {
-    if(this.data.listAB[1] == 'A'){
-      this.setData({
-        A:this.data.A + 1
-      })
-    }
-    else if (this.data.listAB[1] == 'B') {
-      this.setData({
-        B: this.data.B + 1
-      })
-    }
-
+    this.show(this, 'slide_up1', 0)
+    setTimeout(function() {
+      this.show(this, 'slide_up1', 1)
     this.setData({
-      index: this.data.index + 1,
-      realIndex: this.data.list[this.data.index]
-    })
-    this.setData({
-      questionDetail: app.globalData.question[this.data.realIndex].question,
-      answerA: app.globalData.question[this.data.realIndex].option[this.data.listAB[0]],
-      answerB: app.globalData.question[this.data.realIndex].option[this.data.listAB[1]],
-
-    })
-    if (this.data.index == 10) {
-      wx.redirectTo({
-        url: '/pages/result/result'
-      })
-    }
+      answer: this.data.answer+(options.currentTarget.dataset.curent),
+      index:this.data.index+1,
+      current: this.data.list[this.data.index+1]
+    });
+ 
+    // console.log(this.data.index, this.data.list.length,'123')
+  }.bind(this),1000)
+  console.log(this.options,'111')
   },
-
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -145,16 +116,19 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function (options) {
     const animation = wx.createAnimation({
       duration: 1000,
       timingFunction: 'linear',
     })
     this.animation = animation
     this.setData({
-      animationData: animation
+      animationData: animation,
+      answer: this.data.answer+(options),
+      index:this.data.index,
+      current: this.data.list[this.data.index]
     })
+
     var n = 0;    var m = true;    
     //连续动画需要添加定时器,所传参数每次+1就行    
       setInterval(function () {      
@@ -178,12 +152,6 @@ Page({
    */
   onShow: function () {
     this.show(this, 'slide_up1',  1)
-  },
-  selectShow(){
-    this.show(this, 'slide_up1',  0)
-    setTimeout(function(){
-      this.show(this, 'slide_up1',  1)
-    }.bind(this),1000)
   },
 
   /**
