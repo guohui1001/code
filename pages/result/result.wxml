@@ -2,8 +2,12 @@
 
 <view>
         <image src="/image/bg@2x2.png" class="box" />
-        
-         <text class="text">测试结果</text>
+         <view class='nav' style='height:{{navH}}rpx'>
+        <view class='nav-title'>
+            测试结果
+            <image src='/image/fanhui@2x .png' mode='aspectFit' class='back' bindtap='navBack'></image>
+        </view>
+    </view>
          <image src="/image/stara03_@2x.png" class="box-pink" />
          <image src="/image/staar02_@2x.png" class="box-blue" />
          <view class="buttom-box">

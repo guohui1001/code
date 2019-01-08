@@ -15,7 +15,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+    const App = getApp();
+    this.setData({
+      navH: App.globalData.navHeight
+    })
   },
  
 
@@ -101,5 +104,10 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  navBack(){
+    wx.switchTab({
+      url:"/pages/home/home"
+    })
+}
 })

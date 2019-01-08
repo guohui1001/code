@@ -26,7 +26,7 @@ Component({
       const app = getApp();
       // console.log(app.globalData.token, 'app.globalData.token')
       wx.request({
-        url: `${devip.devip}/faceJob_small_wechat/news/listNews`,
+        url: `${devip.devip}/news/listNews`,
         method: 'post',
         header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
         success:function(res){

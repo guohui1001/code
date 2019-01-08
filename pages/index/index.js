@@ -1,11 +1,15 @@
 const app = getApp();
 Page({
     data: {
+        // nickName: "微信账号登录",
+        // avatarUrl:"./user-unlogin.png",
         //判断小程序的API，回调，参数，组件等是否在当前版本可用。
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     onLoad: function () {
-        var that = this;
+        // var that = this;
+        // var db="no";
+        
         // 查看是否授权
         wx.getSetting({
             success: function (res) {
@@ -13,24 +17,27 @@ Page({
                     wx.getUserInfo({
                         success: function (res) {
                             //从数据库获取用户信息
-                            that.queryUsreInfo();
+                            // that.queryUsreInfo();
                             //用户已经授权过
                             wx.switchTab({
                                 url: '/pages/home/home'
                             })
+                          
                         }
                     });
                 }
             }
         })
     },
+    
     bindGetUserInfo: function (e) {
+       
         if (e.detail.userInfo) {
-            //用户按了允许授权按钮
+            // 用户按了允许授权按钮
             var that = this;
-            //插入登录的用户的相关信息到数据库
+            // 插入登录的用户的相关信息到数据库
             wx.request({
-                url: app.globalData.urlPath + 'user/add',
+                url: app.globalData.urlPath+ 'user/add',
                 data: {
                     openid: getApp().globalData.openid,
                     nickName: e.detail.userInfo.nickName,
@@ -42,17 +49,17 @@ Page({
                     'content-type': 'application/json'
                 },
                 success: function (res) {
-                    //从数据库获取用户信息
+                    // 从数据库获取用户信息
                     that.queryUsreInfo();
                     console.log("插入小程序登录用户信息成功！");
                 }
             });
-            //授权成功后，跳转进入小程序首页
+            // 授权成功后，跳转进入小程序首页
             wx.switchTab({
                 url: '/pages/home/home'  
             })
         } else {
-            //用户按了拒绝按钮
+            // 用户按了拒绝按钮
             wx.showModal({
                 title:'警告',
                 content:'您点击了拒绝授权，将无法进入小程序，请授权之后再进入!!!',
@@ -68,6 +75,7 @@ Page({
     },
     //获取用户信息接口
     queryUsreInfo: function () {
+        console.log(app.globalData.urlPath,'3')
         wx.request({
             url: app.globalData.urlPath + 'user/userInfo',
             data: {
@@ -84,3 +92,4 @@ Page({
     },
 
 })
+

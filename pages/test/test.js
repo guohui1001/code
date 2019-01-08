@@ -63,6 +63,7 @@ Page({
   setOption: function() {
 
   },
+ 
   selectShow: function (options) {
     console.log(options,'1')
     if (this.data.index+1 >= this.data.list.length ) {
@@ -76,11 +77,12 @@ Page({
     this.setData({
       answer: this.data.answer+(options.currentTarget.dataset.curent),
       index:this.data.index+1,
-      current: this.data.list[this.data.index+1]
+      current: this.data.list[this.data.index+1],
+     
     });
  
     // console.log(this.data.index, this.data.list.length,'123')
-  }.bind(this),1000)
+  }.bind(this),800)
   console.log(this.options,'111')
   },
   /**
@@ -99,7 +101,7 @@ Page({
    show (that,param,opacity){
     var animation = wx.createAnimation({
       //持续时间800ms
-      duration: 3000,
+      duration: 1000,
       timingFunction: 'ease',
     });
     //var animation = this.animation
@@ -117,6 +119,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function (options) {
+    
     const animation = wx.createAnimation({
       duration: 1000,
       timingFunction: 'linear',
@@ -153,6 +156,8 @@ Page({
   onShow: function () {
     this.show(this, 'slide_up1',  1)
   },
+  
+  
 
   /**
    * 生命周期函数--监听页面隐藏

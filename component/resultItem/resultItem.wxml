@@ -1,14 +1,15 @@
 <!-- component/resultItem/resultItem.wxml -->
-<view data="{{newsResult}}"  wx:key="id" wx:for-item="item._id" >
+<view >
         <view class="box">
-            <text class="title">{{item.jobDesc}}</text>
-            <text class="topic">{{item.jobName}}</text>
+            <text class="title">最适合你的职业</text>
+            <text class="topic">{{newsResult.jobName}}</text>
         </view>
         <view  class="match">
             <text class="matched">职业匹配度 </text>
             <image  src="/image/star_0.png" class="star"/>
+            <image  src="/image/star_0.png" class="star"/>
         </view>
-             <text class="content">从 2015 年 4 月起，Ant Design 在蚂蚁金服中后台产品线迅速推广，对接多条业务线，覆盖系统 800 个以上。定位于中台业务的 Ant Design 兼顾专业和非专业的设计人员。</text>
+             <text class="content">{{newsResult.jobDesc}}</text>
    <view class="QB">
         <view class="code"></view>
         <text class="scanning">扫描二维码参加测试</text>

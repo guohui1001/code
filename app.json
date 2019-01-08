@@ -1,10 +1,10 @@
 {
   "pages": [
-    
+    "pages/index/index",
     "pages/result/result",
     "pages/test/test",
     "pages/product/product",
-    "pages/index/index",
+    
     "pages/demo/demo",
     "pages/home/home",
     "pages/tryout/tryout",
@@ -27,20 +27,20 @@
       {
         "pagePath": "pages/home/home",
         "text": "测试一下",
-        "iconPath": "/image/icon/icon_sq_1nor.png",
-        "selectedIconPath": "/image/icon/icon_sq_nor1.png"
+        "iconPath": "/image/icon/icon3_sq_nor.png",
+        "selectedIconPath": "/image/icon/icon4_sq_nor 2.png"
       },
       {
         "pagePath": "pages/product/product",
         "text": "新闻资讯",
-        "iconPath": "/image/icon/icon_prduct_nor.png",
-        "selectedIconPath": "/image/icon/icon_prduct_pr.png"
+        "iconPath": "/image/icon/icon2_prduct_nor.png",
+        "selectedIconPath": "/image/icon/icon3_prduct_pr.png"
       },
       {
         "pagePath": "pages/tryout/tryout",
         "text": "申请试用",
-        "iconPath": "/image/icon/icon_aboutus_nor.png",
-        "selectedIconPath": "/image/icon/icon_aboutuspr.png"
+        "iconPath": "/image/icon/icon1_aboutus_nor.png",
+        "selectedIconPath": "/image/icon/icon2_aboutuspr.png"
       }
     ]
   }

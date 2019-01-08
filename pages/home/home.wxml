@@ -1,6 +1,7 @@
 <!-- pages/home/home.wxml -->
 <view class="body">
   <view class="background">
+   <!-- <audio src="/image/1_20190103112140476.mp3" id="myAudio"></audio> -->
     <image src="/image/bg_@2x.png" class="top" />
     <text class="text">Face Job</text>
     <image src="/image/Face@2x.png" class="logo" />
@@ -12,21 +13,21 @@
     <text class="title">选择你心仪的小怪兽加入测试吧~</text>
   </view>
   <view class="bottom">
-    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="1" bindtap="doubleTap">
+    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="1" bindtap="onClick">
       <image src="/image/starmaster01@2x.png" class="logo1" />
       <image src="/image/master01@2x.png" class="smallIcon" />
     </view>
-    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="2" bindtap="doubleTap">
+    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="2" bindtap="onClick">
       <image src="/image/starmaster02@2x.png" class="logo2" />
       <image src="/image/master02@2x.png" class="smallIcon2" />
     </view>
   </view>
   <view class="bottom2">
-    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="3" bindtap="doubleTap">
+    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="3" bindtap="onClick">
       <image src="/image/starmaster03@2x.png" class="logo1" />
       <image src="/image/master03@2x.png" class="smallIcon" />
     </view>
-    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="4" bindtap="doubleTap">
+    <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="4" bindtap="onClick">
       <image src="/image/starmaster04@2x.png" class="logo2" />
       <image src="/image/master04@2x.png" class="smallIcon2" />
     </view>

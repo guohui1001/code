@@ -65,7 +65,7 @@
 }
 .content{
     width: 554rpx;
-    margin-left:50rpx ;
+    margin-left:30rpx ;
 }
 .ufo2{
     position: absolute;
@@ -80,13 +80,17 @@
     margin-bottom: 50rpx;
     margin-left: 20rpx;
 }
-.facejobBtn{
-    margin-bottom: 10rpx;
+
+.faceJob{
+    margin-top: 40rpx;
 }
 .but{
     width: 50rpx;
     height: 54rpx;
     vertical-align:middle;
+}
+.btn{
+    margin-left: 15rpx;
 }
 
 .page-number{
@@ -97,4 +101,8 @@
 }
 .init{
     opacity:0;
+}
+
+.face{
+    color:orange;
 }

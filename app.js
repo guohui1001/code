@@ -1,8 +1,20 @@
 //app.js
 // const Towxml = require('/towxml/main');     //引入towxml库
 const  devip = require('/utils/ipconfig')
+
 App({
   onLaunch: function () {
+    const innerAudioContext = wx.createInnerAudioContext()
+    innerAudioContext.autoplay = true
+    // innerAudioContext.loop=true
+    innerAudioContext.src = '/image/1_20190103112140476.mp3'
+    innerAudioContext.onPlay(() => {
+      console.log('开始播放')
+    })
+    innerAudioContext.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
+    })
     wx.getSystemInfo({
       success: res => {
         //导航高度
@@ -19,11 +31,34 @@ App({
     // 登录
     wx.login({
       success: res => {
+        if(res.code){
+          
+          wx.getUserInfo({
+            success:function(res_user){
+            console.log(res_user,'66')
+              wx.request({
+                url:`${devip.devip}/user/saveUser`,
+                method:'POST',
+                data:{
+                  code:res.code,
+                  avatarUrl:res_user.userInfo.avatarUrl,
+                  nickName:res_user.userInfo.nickName,
+                  gender:res_user.userInfo.gender,
+                  province:res_user.userInfo.province,
+                  city:res_user.userInfo.city
+                },
+                success:function(res){
+                  wx.setStorageSync("openid", res.data)
+                }
+              })
+            }
+          })
+        }
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
 wx.request({
-  url:`${devip.devip}/faceJob_small_wechat/user/login`,
+  url:`${devip.devip}/user/login`,
   data:{
     username: 'wewijjudn', 
     password:'mkjshdnnjnj+--sadjj}}{{{'
@@ -49,7 +84,7 @@ wx.request({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
-
+              
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
@@ -60,10 +95,19 @@ wx.request({
         }
       }
     })
+    
   },
+ 
+
+
+
+
   // towxml:new Towxml(),
   globalData: {
     userInfo: null,
     token:null
-  }
+  },
+  
+ 
 })
+

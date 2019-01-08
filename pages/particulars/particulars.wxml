@@ -1,6 +1,6 @@
 <!-- pages/particulars/particulars.wxml -->
 
-<web-view wx:if="{{newsDetail.urlType==1}}" src="http://www.baidu.com"></web-view>
+<web-view wx:if="{{newsDetail.urlType==1}}" src="{{newsDetail.url}}"></web-view>
 <view wx:else>
     <view class="top">
      <view class='nav bg-white' style='height:{{navH}}rpx'>

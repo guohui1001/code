@@ -33,7 +33,7 @@ Page({
   requestData:function(id){
     const app = getApp();
     wx.request({
-      url:`${devip.devip}/faceJob_small_wechat//news/newsDetail`,
+      url:`${devip.devip}/news/newsDetail`,
       method: 'POST',
       header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
       data: {id: id},

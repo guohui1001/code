@@ -29,7 +29,7 @@ Component({
     requestData: function (id) {
       const app = getApp();
       wx.request({
-        url: `${devip.devip}//faceJob_small_wechat//evResults/getEvResult `,
+        url: `${devip.devip}//evResults/getEvResult `,
         method: 'POST',
         header: { "Content-Type": "application/x-www-form-urlencoded", token: app.globalData.token },
         success: function (res) {

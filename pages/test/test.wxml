@@ -1,29 +1,30 @@
 <!-- pages/test/test.wxml -->
-<view >
+<view>
     <image src="/image/bg@2x.jpg" class="picture" />
-   <view class='nav bg-white' style='height:{{navH}}rpx'>
-    <view class='nav-title'>Face Job
-      <image src='/image/fanhui@2x .png' mode='aspectFit' class='back' bindtap='navBack'></image> 
+    <view class='nav bg-white' style='height:{{navH}}rpx'>
+        <view class='nav-title'>
+            Face Job
+            <image src='/image/fanhui@2x .png' mode='aspectFit' class='back' bindtap='navBack'></image>
+        </view>
     </view>
-  </view>
     <image src="/image/stara01_@2x.png" class="picture-box" />
     <image src="{{imgSrc}}" class="monster" animation='{{animationData}}' />
-    <image src="/image/ufo@2x.png" class="ufo" animation='{{animationData}}'/>
+    <image src="/image/ufo@2x.png" class="ufo" animation='{{animationData}}' />
     <image src="/image/staar02_@2x.png" class="star" />
-    <image src="/image/Triangle@2x.png" class="arrow" />
-    <view class="topic init"  animation="{{slide_up1}}" >
-        <text class="content" >{{index+1}}、{{current.title}}</text>
-        <view class="select-btn">
-            <view bindtap="selectShow" class="facejobBtn" data-curent='A'>
-               <image src="/image/btn_@2x.png" class="but"/><text class="btn">{{current.optionA}}</text>
-                
+    <image src="/image/Triangle@2x.png" class="arrow" animation="{{slide_up1}}" />
+    <view class="topic init" animation="{{slide_up1}}">
+        <text class="content">{{index+1}}、{{current.title}}</text>
+        <view class="select-btn" >
+            <view bindtap="selectShow" class="facejobBtn" data-curent='A' hover-class="face">
+                <image src="/image/btn_@2x.png" class="but" />
+                <text class="btn">{{current.optionA}}</text>
             </view>
-            <view bindtap="selectShow" data-curent='B'>
-            <image src="/image/btn_@2x.png" class="but" /><text class="btn" >{{current.optionB}}</text>
-             
+            <view bindtap="selectShow" data-curent='B' class="faceJob" hover-class="face">
+                <image src="/image/btn_@2x.png" class="but" />
+                <text class="btn">{{current.optionB}}</text>
             </view>
         </view>
     </view>
     <image src="/image/stara03_@2x.png" class="ufo2" />
-    <text class="page-number">01/10</text>
+    <!-- <text class="page-number">01/10</text> -->
 </view>
