@@ -67,7 +67,7 @@
 }
 .photo{
     width: 172rpx;
-    height: 172rpx;
+    height: 148rpx;
     margin-left: 258rpx;
-    margin-top: 20rpx;
+    margin-top: 30rpx;
 }

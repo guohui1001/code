@@ -1,7 +1,7 @@
 /* pages/home/home.wxss */
 .body{
     background-color: #000042;
-    height:100vh;
+    /* height:100vh; */
 }
 .background{
     width: 100%;
@@ -99,4 +99,13 @@
     justify-content:space-around;
     margin-top: 30rpx;
     /* margin-bottom: 54rpx; */
+}
+.content-img{
+    margin-top: 20rpx;
+}
+.content-img image{
+    width: 670rpx;
+    height: 346rpx;
+    margin-left: 40rpx;
+    /* margin-top:10rpx; */
 }

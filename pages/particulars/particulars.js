@@ -23,7 +23,7 @@ Page({
       navH: App.globalData.navHeight
     })
 
-    console.log(options.id, 'options')
+    // console.log(options.id, 'options')
     // this.setData({
     //   id: options.id
     // })
@@ -38,8 +38,10 @@ Page({
       header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
       data: {id: id},
       success:function(res){
+        // console.log(res,'1243')
         if(res.data.code === 0){
           const newsDetail = res.data.data.news
+            newsDetail.coverImgPath = `${devip.devip}`+"/news/viewImg?id="+newsDetail.id+"&t="+Math.random();
           this.setData({
             newsDetail:newsDetail
           })

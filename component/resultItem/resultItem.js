@@ -12,15 +12,19 @@ Component({
    * 组件的初始数据
    */
   data: {
-    newsResult:{
-    id: "",
-    jobName: "",
-    jobMachStar: "",
-    jobDesc: ""
-  }
+    newsResult: {
+      id: "",
+      jobName: "",
+      jobMachStar: "",
+      jobDesc: "",
+     
+    },
+    scene: "",
+    ewmUrl:""
   },
   ready: function () {
     this.requestData()
+
   },
   /**
    * 组件的方法列表
@@ -28,37 +32,51 @@ Component({
   methods: {
     requestData: function (id) {
       const app = getApp();
+
       wx.request({
-        url: `${devip.devip}//evResults/getEvResult `,
+        url: `${devip.devip}/evResults/getEvResult`,
         method: 'POST',
-        header: { "Content-Type": "application/x-www-form-urlencoded", token: app.globalData.token },
+        header: { "Content-Type": "application/x-www-form-urlencoded", "token": app.globalData.token },
         success: function (res) {
-          var num = Math.floor(Math.random() * 2 + 0);
+          // console.log(res.data.data.evs,'2')
+          var num = Math.floor(Math.random() * (res.data.data.evs.length));
           if (res.data.data.evs[num]) {
             const data = res.data.data.evs[num]
-            console.log(data,'1')
+            // console.log(data,'2')
             this.setData({
               newsResult: data
             })
           }
-          console.log(num,'2')
-          // var rnd="";
-          // for(var i=0;i<n;i++)
-          // rnd+=Math.floor(Math.random()*10);
-          // return rnd;
 
-          // if(res.data.data.evs.length==1){
-          // const data = res.data.data.data;
-          // console.log(res.data.data.evs)
-          // this.setData({
-          // newsResult:data
-          // })
-          // }
-          // console.log(res.data.data.evs,'121')
         }.bind(this)
 
 
       })
+
+      var that=this;
+      that.setData({
+        ewmUrl:`${devip.devip}/staticResource/1547532403794.jpg`
+      })
+
+     
     },
-  }
+    previewImage: function (e) {
+      wx.previewImage({
+        urls: this.data.ewmUrl.split(',')
+      })
+    },
+
+
+    jump: function () {
+      wx.switchTab({
+        url: '/pages/home/home'
+      })
+      // console.log(1)
+    }
+
+
+  },
+
+
+
 })

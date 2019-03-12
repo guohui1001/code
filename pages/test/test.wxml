@@ -3,7 +3,7 @@
     <image src="/image/bg@2x.jpg" class="picture" />
     <view class='nav bg-white' style='height:{{navH}}rpx'>
         <view class='nav-title'>
-            Face Job
+            FaceJob
             <image src='/image/fanhui@2x .png' mode='aspectFit' class='back' bindtap='navBack'></image>
         </view>
     </view>

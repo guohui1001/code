@@ -1,4 +1,4 @@
 <!--component/stars/stars.wxml-->
 <view>
-<image  src="/image/star_0.png" />
+<image  src="/image/star_{{resultltem}}.png" />
 </view>

@@ -1,10 +1,10 @@
 <!--component/article/article.wxml-->
-<view>
+<view style=" background-color:rgb(255.255.255);">
 <view class="article" wx:for="{{listNews}}"  wx:key="id"id="{{item.id}}" wx:for-item="item" bindtap="toNewsDetail">
     <image class="photo" src="{{item.coverImgPath}}" />
     <view class="character">
     <text class="title">{{item.title}}</text>
-    <text class="content">{{item.context}}</text>
+    <!-- <text class="content">{{item.context}}</text> -->
     </view>
 </view>
 </view>

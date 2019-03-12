@@ -1,4 +1,5 @@
 // pages/home/home.js
+const devip = require('../../utils/ipconfig')
 Page({
 
   /**
@@ -28,8 +29,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
   },
-  
+
 /// 双击
 onClick: function(e) {
   // var that = this
@@ -57,7 +59,18 @@ onClick: function(e) {
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    const backgroundAudioManager = wx.getBackgroundAudioManager()
+
+    backgroundAudioManager.title = 'I Hate Myself For Loving You'
+    // backgroundAudioManager.epname = '此时此刻'
+    // backgroundAudioManager.singer = '许巍'
+    backgroundAudioManager.coverImgUrl = 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000'
+    // 设置了 src 之后会自动播放
+    backgroundAudioManager.src = `${devip.devip}/staticResource/1_20190103112140476.mp3`;
+    backgroundAudioManager.onError(function(e){
+      console.log(e)
+    })
+
   },
 
   /**

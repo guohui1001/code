@@ -27,12 +27,12 @@
 }
 .buttom-box{
     width: 670rpx;
-    height: 908rpx;
+    /* height: 908rpx; */
     position: absolute;
     left: 40rpx;
     top: 368rpx;
     background:rgba(255,255,255,1);
-    box-shadow:0rpx 12rpx 20rpx -12rpx rgba(28,3,64,0.3);
+    /* box-shadow:0rpx 12rpx 20rpx -12rpx rgba(28,3,64,0.3); */
     border-radius:20rpx;
 }
 

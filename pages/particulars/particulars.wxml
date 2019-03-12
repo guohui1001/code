@@ -1,10 +1,10 @@
 <!-- pages/particulars/particulars.wxml -->
 
-<web-view wx:if="{{newsDetail.urlType==1}}" src="{{newsDetail.url}}"></web-view>
+<web-view wx:if="{{newsDetail.urlType==2}}" src="{{newsDetail.url}}"></web-view>
 <view wx:else>
     <view class="top">
      <view class='nav bg-white' style='height:{{navH}}rpx'>
-        <text class="text">Face Job</text>
+        <text class="text">FaceJob</text>
           <image src='/image/fanhui@2x .png' mode='aspectFit' class='back' bindtap='navBack'></image> 
     </view>
     </view>
@@ -14,9 +14,9 @@
         <text class="time">时间：{{newsDetail.create_date}}</text>
     </view>
     <image src="{{newsDetail.coverImgPath}}" />
-    <view class="article">
+    <!-- <view class="article"> -->
         <text class="content">
           {{newsDetail.context}}
         </text>
-    </view>
+    <!-- </view> -->
 </view>

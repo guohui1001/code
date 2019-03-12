@@ -19,6 +19,23 @@ Page({
     this.setData({
       navH: App.globalData.navHeight
     })
+    
+    // var that=this;
+    // wx.request({
+    //   url: `${devip.devip}/test/createEwm`,
+    //   method: 'GET',
+    //   header: { "Content-Type": "application/x-www-form-urlencoded", "token": app.globalData.token },
+    //   success: function (res) {
+    //     console.log(res,'55')
+    //     debugger
+    //     that.setData({
+    //       scene:res.data.data.img
+          
+    //     })
+        
+    //   }
+
+    // })
   },
  
 

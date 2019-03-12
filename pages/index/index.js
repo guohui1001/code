@@ -1,4 +1,5 @@
 const app = getApp();
+const devip = require('../../utils/ipconfig')
 Page({
     data: {
         // nickName: "微信账号登录",
@@ -6,10 +7,11 @@ Page({
         //判断小程序的API，回调，参数，组件等是否在当前版本可用。
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
-    onLoad: function () {
+    onLoad: function (options) {
         // var that = this;
         // var db="no";
-        
+       
+
         // 查看是否授权
         wx.getSetting({
             success: function (res) {
@@ -31,23 +33,64 @@ Page({
     },
     
     bindGetUserInfo: function (e) {
-       
+        
         if (e.detail.userInfo) {
             // 用户按了允许授权按钮
             var that = this;
             // 插入登录的用户的相关信息到数据库
+            // debugger
+            wx.login({
+                success: res => {
+                  if(res.code){
+                    // console.log(res,'3')
+                    wx.getUserInfo({
+                      success:function(res_user){
+                      
+                        wx.request({
+                          url:`${devip.devip}/user/saveUser`,
+                          method:'POST',
+                          data:{
+                            "js_code":res.code,
+                            "avatarUrl":res_user.userInfo.avatarUrl,
+                            "nickName":res_user.userInfo.nickName,
+                            "gender":res_user.userInfo.gender,
+                            "province":res_user.userInfo.province,
+                            "city":res_user.userInfo.city
+                          },
+                          header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
+                          success:function(res){
+                            //   if(res.statusCode==200){
+                                wx.setStorageSync("openid", res.data)
+                            //   }else{
+                            //       console.log(res.errMsg)
+                            //   }
+                            // console.log(res,'1')
+                           
+          
+                          },
+                          fail:function(o){
+                            // console.log(o)
+                          }
+                        })
+                      }
+                    })
+                  }
+                  // 发送 res.code 到后台换取 openId, sessionKey, unionId
+                }
+              })
             wx.request({
-                url: app.globalData.urlPath+ 'user/add',
+                url: `${devip.devip}/user/saveUser`,
+                method: 'POST',
                 data: {
-                    openid: getApp().globalData.openid,
-                    nickName: e.detail.userInfo.nickName,
-                    avatarUrl: e.detail.userInfo.avatarUrl,
-                    province:e.detail.userInfo.province,
-                    city: e.detail.userInfo.city
+                    "js_code":1,
+                    "openid": getApp().globalData.openid,
+                    "nickName": e.detail.userInfo.nickName,
+                    "avatarUrl": e.detail.userInfo.avatarUrl,
+                    "province":e.detail.userInfo.province,
+                    "city": e.detail.userInfo.city,
+                    "gender":e.detail.userInfo.gender
                 },
-                header: {
-                    'content-type': 'application/json'
-                },
+                header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
                 success: function (res) {
                     // 从数据库获取用户信息
                     that.queryUsreInfo();
@@ -74,22 +117,22 @@ Page({
         }
     },
     //获取用户信息接口
-    queryUsreInfo: function () {
-        console.log(app.globalData.urlPath,'3')
-        wx.request({
-            url: app.globalData.urlPath + 'user/userInfo',
-            data: {
-                openid: app.globalData.openid
-            },
-            header: {
-                'content-type': 'application/json'
-            },
-            success: function (res) {
-                console.log(res.data);
-                getApp().globalData.userInfo = res.data;
-            }
-        })
-    },
+    // queryUsreInfo: function () {
+    //     // console.log(app.globalData.urlPath,'3')
+    //     wx.request({
+    //         url: `${devip.devip}/user/userInfo`,
+    //         data: {
+    //             openid: app.globalData.openid
+    //         },
+    //         header: {
+    //             'content-type': 'application/json'
+    //         },
+    //         success: function (res) {
+    //             // console.log(res.data);
+    //             getApp().globalData.userInfo = res.data;
+    //         }
+    //     })
+    // },
 
 })
 

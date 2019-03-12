@@ -6,13 +6,15 @@
         </view>
         <view  class="match">
             <text class="matched">职业匹配度 </text>
-            <image  src="/image/star_0.png" class="star"/>
-            <image  src="/image/star_0.png" class="star"/>
+            <stars  wx:for="{{newsResult.jobMachStar}}" wx:key="{{item._id}}" movieStars="{{item}}"/>
         </view>
              <text class="content">{{newsResult.jobDesc}}</text>
-   <view class="QB">
-        <view class="code"></view>
-        <text class="scanning">扫描二维码参加测试</text>
+    <view class="QB">
+        <!-- <view class="code"></view> -->
+        <image src="{{ewmUrl}}" class="code" bindtap="previewImage" mode="widthFix" data-src="{{ewmUrl}}"   />
+        <text class="scanning">长按参加测试</text>
     </view>
-    <image src="/image/Group 55@2x.png" class="photo"/>
+    <button class="return"  bindtap='jump' >点击返回主页</button>
+    <!-- <image src="/image/Group 55@2x.png" class="photo"/> -->
+    
 </view>

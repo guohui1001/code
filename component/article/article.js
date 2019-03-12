@@ -29,14 +29,20 @@ Component({
         url: `${devip.devip}/news/listNews`,
         method: 'post',
         header: {"Content-Type":"application/x-www-form-urlencoded", token:app.globalData.token },
+        // data:{id},
         success:function(res){
-          
+          // console.log(res,'5')
           if(res.data.code === 0){
-            const data = res.data.data.newsList;
-
-            // console.log(data, 'data')
-
-
+            const data = res.data.data.page.list;
+            // debugger;
+            for (var i = 0; i < data.length; i++) {
+                data[i].coverImgPath = `${devip.devip}`+"/news/viewImg?id="+data[i].id+"&t="+Math.random();
+                // console.log(data[i].coverImgPath,'7')
+                // data[i].title=data[i].title.substring(0,40)+"..."
+                // data[i].context=data[i].context.substring(0,20)+"..."
+                
+            }
+           
             this.setData({
               listNews: data
             })
@@ -48,7 +54,7 @@ Component({
       })
     },
     toNewsDetail:function(e){
-      console.log(e, 'e')
+      
       const id = e.currentTarget.id
       wx.navigateTo({
         url: `../particulars/particulars?id=${id}`

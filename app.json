@@ -1,12 +1,12 @@
 {
   "pages": [
+    
     "pages/index/index",
-    "pages/result/result",
+    "pages/home/home",
     "pages/test/test",
     "pages/product/product",
-    
     "pages/demo/demo",
-    "pages/home/home",
+    "pages/result/result",
     "pages/tryout/tryout",
     "pages/logs/logs",
     "pages/particulars/particulars"
@@ -14,11 +14,12 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Feac Job",
+    "navigationBarTitleText": "FeacJob",
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
     
   },
+  "requiredBackgroundModes": ["audio"],
   "tabBar": {
     "color": "#666666",
     "selectedColor": "#006FFF",

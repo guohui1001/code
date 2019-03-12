@@ -1,4 +1,5 @@
 /* component/resultItem/resultItem.wxss */
+
 .box{
     width: 300rpx;
     margin: auto;
@@ -11,17 +12,18 @@
     font-weight:500;
 }
 .topic{
-    font-size: 52rpx;
+    font-size: 40rpx;
     margin-top: 200rpx;
     display: flex;
     justify-content: center;
-    color: #FFD50F;
+    color: #62DBFF;
 }
 .match{
     width: 402rpx;
     display: flex;
     justify-content: center;
     margin-top: 20rpx;
+    margin-left: 100rpx;
 }
 .matched{
     color: #FFD50F;
@@ -32,7 +34,7 @@
     height:160rpx;
     font-size:28rpx;
     font-weight:500;
-    color:rgba(0,0,0,1);
+    color:gray;
     line-height:40rpx;
 }
 .QB{
@@ -40,25 +42,33 @@
     height: 210rpx;
     margin: auto;
     margin-top: 20rpx;
+    
 }
 .code{
-    width:160rpx;
-    height:160rpx;
-    background:rgba(216,216,216,1);
-    border:2rpx solid rgba(151,151,151,1);
-    margin: auto;
+    width:240rpx;
+    height:240rpx;
+    /* background:rgb(187, 129, 129); */
+    /* border:2rpx solid rgba(151,151,151,1); */
+    /* margin-left: 10px; */
 }
 .scanning{
     font-size:28rpx;
     font-weight:400;
     color:rgba(3,1,30,1);
+    display: flex;
+    margin-bottom: 40rpx;
+    margin-left: 30rpx;
 }
-.photo{
-    width:388rpx;
-    height:78rpx;
-   margin-left: 142rpx;
-   margin-top: 30rpx;
-}
+.return{
+    width:300rpx;
+    height:80rpx;
+    margin-top: 100rpx;
+    background-color: orange;
+    color: white;
+    margin-bottom: 20rpx;
+    
+   }
+
 .star{
     margin-top: 10rpx;
 }

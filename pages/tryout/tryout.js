@@ -50,7 +50,7 @@ Page({
       },
       success:function(res){
 var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/
-        // console.log(this.data.phone)
+        // console.log(data,'444')
         if(this.data.company == 0){
           wx.showToast({
             title: '公司名称！',
@@ -72,10 +72,12 @@ var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/
             duration: 500,
             mask: true
           })
+        }else if(this.data.company != 0&&this.data.username != 0&&this.data.phone!=0){
+          wx.showToast({
+            title: '提交成功',
+          })
         }
-       
-      }.bind(this)
-
+      }.bind(this),
     })
   },
 

@@ -3,7 +3,7 @@
   <view class="background">
    <!-- <audio src="/image/1_20190103112140476.mp3" id="myAudio"></audio> -->
     <image src="/image/bg_@2x.png" class="top" />
-    <text class="text">Face Job</text>
+    <text class="text">FaceJob</text>
     <image src="/image/Face@2x.png" class="logo" />
     <image src="/image/star01_@2x.png" class="photo" />
     <image src="/image/star02_@2x.png" class="photo1" />
@@ -12,6 +12,11 @@
   <view class="topic">
     <text class="title">选择你心仪的小怪兽加入测试吧~</text>
   </view>
+  <!-- <view class="content-img">
+   <image src="/image/1.png" />
+  <image src="/image/2.png" />
+  <image src="/image/3.png" />
+  </view> -->
   <view class="bottom">
     <view class="bottom-imgBox" hover-class="bottom-imgBoxhover" id="1" bindtap="onClick">
       <image src="/image/starmaster01@2x.png" class="logo1" />
